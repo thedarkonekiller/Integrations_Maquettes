@@ -1,0 +1,22 @@
+/* CSS Général */
+/* Header */
+header div {
+    background: #1B2430;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header img {
+    width: 50px;
+    height: 55px;
+}
+header ul {
+    list-style: none;
+    display: flex;
+}
+header a {
+    
+}
+/* Main */
+/* Footer */
