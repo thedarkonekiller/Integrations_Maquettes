@@ -11,9 +11,13 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     position: relative;
     font-family: "Roboto-Regular";
+    font-size: 16px;
 }
 /* Header */
 header div {
@@ -65,7 +69,7 @@ main div {
 }
 .left p, .right p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: justify;
     line-height: 30px;
 }
@@ -87,7 +91,7 @@ main div {
     margin-top: 22px;
     margin-bottom: 18px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 .buttons, h2 {
     margin-left: 0;
@@ -113,9 +117,10 @@ main div {
 h3:first-of-type {
     position: relative;
     margin-top: 97px;
-    margin-left: 769px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: justify;
     line-height: 35px;
 }
@@ -157,6 +162,7 @@ footer ul {
 #fleft {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #fleft div {
     display: flex;
@@ -166,7 +172,7 @@ footer ul {
 #fleft div h4 {
     color: #ffffff;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 40px;
     letter-spacing: 4px;
     text-align: center;
@@ -180,7 +186,7 @@ footer ul {
     text-decoration: none;
     font-family: "Montserrat-Regular";
     font-weight: 500;
-    font-size: 17px;
+    font-size: 1.063rem;
     line-height: 23px;
     text-align: center;
     padding: 9px 0;
@@ -208,9 +214,185 @@ footer ul {
     color: #ffffff;
     font-family: "Montserrat-Regular";
     font-weight: 500;
-    font-size: 17px;
+    font-size: 1.063rem;
     line-height: 17px;
     line-height: 23px;
     text-align: center;
     margin: 11px auto;
+}
+
+/* Responsive */
+@media screen and (max-width: 1584px) {
+    .left, .right {
+        flex-direction: column;
+        width: 90%;
+    }
+    .left > div, .right > div {
+        margin: 10px auto;
+    }
+    .left p, .right p {
+        font-size: 1rem;
+    }
+    h3:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -209px;
+        height: 1px;
+        width: 196px;
+        background-color: #1B2430;
+    }
+    h3:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 362px;
+        height: 1px;
+        width: 196px;
+        background-color: #1B2430;
+}
+}
+@media screen and (max-width: 940px) {
+    .vLine {
+        display: none;
+    }
+    h3:before, h3:after {
+        display: none;
+    }  
+}
+/* Hamburger Menu */
+.top-nav {
+    display: none;
+}
+
+@media screen and (max-width: 740px) {
+header nav {
+    display: none;
+}
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #FFF;
+        height: 50px;
+        padding: 1em;
+      }
+      
+      .menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu > li {
+        overflow: hidden;
+      }
+      
+      .menu-button-container {
+        display: none;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      #menu-toggle {
+        display: none;
+      }
+      
+      .menu-button,
+      .menu-button::before,
+      .menu-button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+      }
+      
+      .menu-button::before {
+        content: '';
+        margin-top: -8px;
+      }
+      
+      .menu-button::after {
+        content: '';
+        margin-top: 8px;
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+      }
+      
+        .menu-button-container {
+          display: flex;
+        }
+        .menu {
+          position: absolute;
+          top: 0;
+          margin-top: 82px;
+          left: 0;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+        #menu-toggle ~ .menu li {
+          height: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #menu-toggle:checked ~ .menu li {
+          border: 1px solid #333;
+          height: 2.5em;
+          padding: 0;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .menu > li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          color: white;
+          background-color: #222;
+          width: 100%;
+        }
+        .menu > li a {
+            padding: 100%;
+        }
+        .menu > li:not(:last-child) {
+          border-bottom: 1px solid #444;
+        }
+
+    
+}
+@media screen and (max-width: 540px) {
+    .left, .right {
+        width: 90%;
+    }
+    .left img, .right img {
+        width: 150px;
+        height: 150px;
+    } 
 }
