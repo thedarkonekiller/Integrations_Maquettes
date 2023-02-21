@@ -3,6 +3,10 @@
     font-family: "Roboto-Regular";
     src: url(../fonts/Roboto-Regular.ttf);
 }
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -133,6 +137,9 @@ h3:after {
     width: 421px;
     background-color: #1B2430;
 }
+#lastParagraphe {
+    margin-bottom: 210px;
+}
 /* Footer */
 
 footer {
@@ -140,13 +147,70 @@ footer {
     flex-direction: column;
     background-color: #1B2430;
 }
+#fullFooter {
+    width: 70%;
+    margin: 0 auto;
+}
+footer ul {
+    list-style: none;
+}
 #fleft {
     display: flex;
     justify-content: center;
 }
+#fleft div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #fleft div h4 {
     color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-top: 46px;
+    margin-bottom: 27px;
+    width: 320px;
 }
 #fleft li a {
+    display: block;
     color: #9F9F9F;
+    text-decoration: none;
+    font-family: "Montserrat-Regular";
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
+    padding: 9px 0;
+}
+.vLine {
+    content: "";
+    width: 1px;
+    height: 210px;
+    background-color: #C4C4C4;
+    margin-top: 55px;
+}
+.bFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hLine {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #d2d2d2;
+    margin-top: 47px;
+}
+.bFooter p {
+    color: #ffffff;
+    font-family: "Montserrat-Regular";
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 17px;
+    line-height: 23px;
+    text-align: center;
+    margin: 11px auto;
 }
