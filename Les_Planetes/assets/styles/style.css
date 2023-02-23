@@ -195,9 +195,9 @@ h3:before {
     content: "";
     position: absolute;
     top: 50%;
-    left: -417px;
+    left: calc(-25rem - 1.563rem);
     height: 1px;
-    width: 392px;
+    width: 25rem;
     background-color: #1B2430;
 }
 
@@ -205,9 +205,9 @@ h3:after {
     content: "";
     position: absolute;
     top: 50%;
-    left: 379px;
+    left: calc(25rem - 1.563rem);
     height: 1px;
-    width: 421px;
+    width: 25rem;
     background-color: #1B2430;
 }
 
@@ -332,7 +332,8 @@ footer ul {
 }
 
 /* Responsive */
-@media screen and (max-width: 1584px) {
+
+@media screen and (max-width: 1220px) {
 
     .left,
     .right {
@@ -351,171 +352,29 @@ footer ul {
     }
 
     h3:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: -209px;
-        height: 1px;
-        width: 196px;
-        background-color: #1B2430;
+        left: calc(-12.5rem - 1.563rem);
+        width:12.5rem;
     }
 
     h3:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 362px;
-        height: 1px;
-        width: 196px;
-        background-color: #1B2430;
+        left: calc(25rem - 1.563rem);
+        width: 12.5rem;
     }
 }
-
-@media screen and (max-width: 940px) {
-    .vLine {
-        display: none;
-    }
-
-    h3:before,
-    h3:after {
-        display: none;
-    }
-}
-
-/* Hamburger Menu */
-.top-nav {
+footer span {
     display: none;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 820px) {
     header nav {
         display: none;
     }
 
-    .top-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        background: transparent;
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        color: #FFF;
-        height: 50px;
-        padding: 1em;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu>li {
-        overflow: hidden;
-    }
-
-    .menu-button-container {
-        display: none;
-        height: 100%;
-        width: 30px;
-        cursor: pointer;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #menu-toggle {
+    h3:before, h3:after {
         display: none;
     }
-
-    .menu-button,
-    .menu-button::before,
-    .menu-button::after {
-        display: block;
-        background-color: #fff;
-        position: absolute;
-        height: 4px;
-        width: 30px;
-        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-        border-radius: 2px;
-    }
-
-    .menu-button::before {
-        content: '';
-        margin-top: -0.5rem;
-    }
-
-    .menu-button::after {
-        content: '';
-        margin-top: 0.5rem;
-    }
-
-    #menu-toggle:checked+.menu-button-container .menu-button::before {
-        margin-top: 0px;
-        transform: rotate(405deg);
-    }
-
-    #menu-toggle:checked+.menu-button-container .menu-button {
-        background: rgba(255, 255, 255, 0);
-    }
-
-    #menu-toggle:checked+.menu-button-container .menu-button::after {
-        margin-top: 0px;
-        transform: rotate(-405deg);
-    }
-
-    .menu-button-container {
-        display: flex;
-    }
-
-    .menu {
-        position: absolute;
-        top: 0;
-        margin-top: 5.125rem;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #menu-toggle~.menu li {
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    #menu-toggle:checked~.menu li {
-        border: 1px solid #333;
-        height: 2.5em;
-        padding: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .menu>li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        color: white;
-        background-color: #222;
-        width: 100%;
-    }
-
-    .menu>li a {
-        padding: 100%;
-    }
-
-    .menu>li:not(:last-child) {
-        border-bottom: 1px solid #444;
-    }
-
-
 }
+
 
 @media screen and (max-width: 540px) {
 
